@@ -1,4 +1,4 @@
-// editpdfgroup.js — Combines Edit PDF, Edit Border, Rotate PDF
+// editpdfgroup.mjs — Combines Edit PDF, Edit Border, Rotate PDF
 
 function editPdfToolGroup(tool, container) {
     switch (tool) {
@@ -16,7 +16,6 @@ function editPdfToolGroup(tool, container) {
     }
 }
 
-// ===== Edit PDF =====
 function renderEditPdf(container) {
     container.innerHTML = `
         <h2>Edit PDF</h2>
@@ -41,7 +40,6 @@ async function applyPdfEdit() {
     downloadPDF(pdfBytes, "edited.pdf");
 }
 
-// ===== Edit Border =====
 function renderEditBorderPdf(container) {
     container.innerHTML = `
         <h2>Edit Border in PDF</h2>
@@ -72,7 +70,6 @@ async function addBorderToPdf() {
     downloadPDF(pdfBytes, "bordered.pdf");
 }
 
-// ===== Rotate PDF =====
 function renderRotatePdf(container) {
     container.innerHTML = `
         <h2>Rotate PDF</h2>
@@ -93,3 +90,5 @@ async function rotatePdf() {
     const pdfBytes = await pdfDoc.save();
     downloadPDF(pdfBytes, "rotated.pdf");
 }
+
+export { editPdfToolGroup };
