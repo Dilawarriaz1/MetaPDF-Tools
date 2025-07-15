@@ -25,3 +25,7 @@ function loadCombinedTool(file, toolName) {
 function showHelp() {
     alert("Use the toolbar to select a tool.\nEach tool helps you convert or modify PDF documents.");
 }
+
+// ✅ Make functions available globally for HTML onclick handlers
+window.loadCombinedTool = loadCombinedTool;
+window.showHelp = showHelp;
