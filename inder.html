@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ultimate PDF Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>📄 Ultimate PDF Toolkit</h1>
+        <input type="text" id="searchBar" placeholder="Search tools...">
+        <button onclick="showHelp()">❓ Help</button>
+    </header>
+
+    <nav id="toolbar">
+        <button onclick="loadTool('imageToPdf')">🖼️ Image to PDF</button>
+        <button onclick="loadTool('wordToPdf')">📝 Word to PDF</button>
+        <button onclick="loadTool('voiceToPdf')">🎤 Voice to PDF</button>
+        <button onclick="loadTool('jpgToPdf')">📷 JPG to PDF</button>
+        <button onclick="loadTool('textToPdf')">🗒️ Text to PDF</button>
+        <button onclick="loadTool('pdfToText')">📄 PDF to Text</button>
+        <button onclick="loadTool('compressPdf')">🗜️ Compress PDF</button>
+        <button onclick="loadTool('pdfToExcel')">📊 PDF to Excel</button>
+        <button onclick="loadTool('editPdf')">✏️ Edit PDF</button>
+        <button onclick="loadTool('editBorderPdf')">🧱 Edit Border</button>
+        <button onclick="loadTool('rotatePdf')">🔄 Rotate PDF</button>
+    </nav>
+
+    <main id="toolContainer">
+        <p>Select a tool from the toolbar to begin.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ultimate PDF Toolkit</p>
+    </footer>
+</body>
+</html>
