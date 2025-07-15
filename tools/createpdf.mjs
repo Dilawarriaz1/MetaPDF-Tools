@@ -1,4 +1,5 @@
-// createpdf.js — Combines imageToPdf, jpgToPdf, textToPdf, voiceToPdf, wordToPdf
+// createpdf.mjs
+// Combined tool functions for: image, jpg, text, voice, and word to PDF
 
 function createPdfTool(tool, container) {
     switch (tool) {
@@ -127,3 +128,5 @@ function renderWordToPdf(container) {
         <p>Requires server-side processing.</p>
     `;
 }
+
+export { createPdfTool };
