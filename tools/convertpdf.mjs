@@ -1,4 +1,4 @@
-// convertpdf.js — Combines PDF to Text and PDF to Excel
+// convertpdf.mjs — Combines PDF to Text and PDF to Excel
 
 function convertPdfTool(tool, container) {
     switch (tool) {
@@ -28,7 +28,7 @@ function renderPdfToText(container) {
         for (let i = 1; i <= pdf.numPages; i++) {
             const page = await pdf.getPage(i);
             const content = await page.getTextContent();
-            fullText += content.items.map(item => item.str).join(' ') + '\\n';
+            fullText += content.items.map(item => item.str).join(' ') + '\n';
         }
         document.getElementById('textOutput').innerText = fullText;
     });
@@ -40,3 +40,5 @@ function renderPdfToExcel(container) {
         <p>This feature requires backend processing.</p>
     `;
 }
+
+export { convertPdfTool };
